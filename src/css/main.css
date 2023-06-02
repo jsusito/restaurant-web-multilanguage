@@ -1,0 +1,409 @@
+@import url("botonReserva.css");
+
+:root{
+  --brown:  
+}
+
+/*css pag restaurante*/
+.background-start{
+    background-image:url("./../images/carrusel01.jpg");
+    height: 100vh;
+    width: 100%;
+}
+
+    
+.btn-menu, .btn-logger{
+    min-width: 50px;
+    min-height: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 400;
+    color: #3e3e3e;
+    border-radius: 10px;
+}
+
+
+.btn-menu:hover{
+    background-color:  #f9dcd1;
+}
+
+.submenu:hover{
+  background-color: #e4bdb4;
+}
+
+.btn-logger {
+  color: #2c2c9c;
+  font-weight: 600;
+}
+.btn-logger:hover{
+  background-color: #667ae9;
+}
+
+.submenu:logger{
+background-color: #90bae0;
+}
+
+.icon-language{
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+
+
+.regard{
+  background-color: #ca9b72;
+  min-height: 50px;
+  height: auto;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  font-family: 'Josefin Slab', Times, serif;
+   
+}
+
+
+@keyframes regard-changue-color{
+  from{
+    background-color: #cba17b;
+  }
+  to{
+    background-color: #ad6a33;
+  }
+}
+
+.regard{
+  animation-name: regard-changue-color;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse
+
+}
+
+.introduccion{
+  max-width: 80vw;
+}
+
+.footer-text{
+  background-color: #caa585;
+  color: white;
+  width: 600; height: 10wh; 
+  
+}
+
+.enlaces {
+  cursor: pointer;
+  color: #2f60d1;
+  text-decoration: underline;
+  text-transform: uppercase;
+  border: none;
+  background-color: white;
+}
+
+.text-footer{
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0px;
+  padding: 8px;
+  
+}
+
+.svg-footer{
+  fill:#5C3618;
+  cursor: pointer;
+}
+
+.iconos{
+  max-width: 60px;
+  max-height: 60px;
+ 
+}
+
+.iconos-little{
+  max-width: 30px;
+  max-height: 30px;
+ 
+}
+
+.little{
+  font-size: 1.2rem;
+}
+
+.img-carrusel{
+  max-width: 45vw;
+  max-height:45vh;
+  border-radius: 100px;
+  
+}
+
+/* estilos para la carta*/
+
+.img-carta{
+  max-width: auto;
+  min-width: auto;
+  max-height: 300px;
+}
+
+.background-carta-encabezado{
+  background-color: #f1d5bd;
+}
+
+
+
+.header-carta, .header-Comida-llevar{
+  
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: 'Josefin Slab', Times, serif;
+}
+
+.header-Comida-llevar{
+  cursor: pointer;
+  height:4rem;
+  text-decoration: underline rgb(77, 79, 85);
+}
+
+
+.parraf-tittle{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.parraf-carta, .parraf-carta-llevar{
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  
+}
+
+.parraf-carta{
+  cursor: pointer;
+    
+}
+
+p.parraf-carta:hover{
+  font-family: cursive;
+  letter-spacing:2.3px;
+}
+
+
+
+
+/* css para especialidades */
+.img-especialidad{
+  width: 95%;
+  max-height: 330px;
+  border-radius: 20px;
+}
+
+
+.container-especialidades{
+  background-color: #c4b1ab;
+  width: 100vw;
+  
+}
+
+.container-seccion{
+  max-width: 1556px;
+ 
+}
+
+.titulo-especialidad{
+  color:#643c1a;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  
+
+}
+
+.ingredientes-especialidad{
+  text-transform: capitalize;
+  letter-spacing: 1.6px;
+  color: #654225;
+  font-weight: 500;
+  
+  
+}
+
+.div-ingredientes{
+  width: auto;
+  min-width: 300pt;
+}
+
+/*Menu de grupo*/
+.menu-grupo{
+  font-weight: bold;
+  margin: 0px;
+}
+
+.lista-platos{
+  letter-spacing: 1.6px;
+  text-transform: capitalize;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: start;
+  margin: 0px;
+}
+
+.descripcionMenus{
+  height: 100vh;
+  overflow: scroll;
+}
+
+
+/*Tabla de reservas*/
+.td-data-reservation{
+  cursor: pointer;
+  color: red;
+}
+
+/*Ventana de error*/
+.msg-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 160px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+
+/*Reserva de mesas*/
+
+.legend-sq {
+  
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+h3.form-reserva{
+  font-weight: 600;
+  color:#B37542
+
+}
+
+form{
+  max-width: 1000px;
+}
+
+.btn-form-contact{
+    min-width: 50px;
+    min-height: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #e7c0a0;
+  background: linear-gradient(90deg, #cc9e79 0%, #bc8e67 100%);
+    border: none;
+    
+    box-shadow: 12px 12px 24px #d0a480;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.parrafo-reserva{
+  font-weight: 700;
+}
+
+label, legend{
+  text-transform: capitalize;
+  
+}
+
+input:not(.input-options-reservas), select{
+  height: 35px;
+  min-width: 250px;
+  
+}
+
+.input-options-reservas:hover{
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.invalid {
+  border-color: red;
+}
+.valid {
+  border-color: blue;
+}
+
+.btn-form{
+  border-radius: 5px;
+  border: none;
+  margin: 4pt;
+  background-color: #caa585;
+  text-transform:uppercase;
+}
+.btn-form:hover{
+  color:white;
+}
+
+.confirm-reserva{
+  background-color: #ccccd1a6;
+}
+
+/*Barra de cookies*/
+.barra-cookies{
+  background-color: #ab9e9ec3;
+    
+}
+.parraf-cookies{
+  text-align: left;
+  
+  
+}
+.btn-cookies{
+  width: 98vh;
+}
+
+
+/*-aviso de boton de fallo del login*/
+.error-autentificacion{
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 30;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  animation: slideUp 3s forwards;
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+}
+
+

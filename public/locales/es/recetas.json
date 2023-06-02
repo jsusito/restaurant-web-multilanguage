@@ -1,0 +1,93 @@
+{
+  "1": {
+  "description1": "tortitas de carne",
+  "ingredientes1": "Deliciosas tortitas de carne con arroz y frijoles",
+  "text1": "Deliciosas tortitas de carne"
+  },
+  "2": {
+  "description2": "arepa especial de vegetales",
+  "ingredientes2": "Aguacate, tomate, cebolla, salsa especial",
+  "text2": "Prueba nuestras arepas, una explosión de sabores"
+  },
+  "3": {
+  "description3": "postre tropical",
+  "ingredientes3": "Fresas, hierbabuena, arroz inflado y moras frescas",
+  "text3": "Un maravilloso postre para disfrutar"
+  },
+  "4": {
+  "description4": "bacon relleno",
+  "ingredientes4": "hojaldre, bacon, dátiles y salsa barbacoa",
+  "text4": "Una experiencia inolvidable"
+  },
+  "5": {
+  "description5": "bocadillo marinero",
+  "ingredientes5": "pan, tomate, rúcula, soja, piña",
+  "text5": "Pruébalo, desearás volver"
+  },
+  "6": {
+  "description6": "carne en salsa Viera",
+  "ingredientes6": "Carne con salsa, ajo, tomate, trufa y ciruela",
+  "text6": "Uno de nuestros mejores platos disponibles"
+  },
+  "7": {
+  "description7": "tallarines con carne y pimiento",
+  "ingredientes7": "",
+  "text7": ""
+  },
+  "8": {
+  "description8": "Carne en su punto",
+  "ingredientes8": "",
+  "text8": ""
+  },
+  "9": {
+  "description9": "gambas al ajillo con salsa de ciruela",
+  "ingredientes9": "",
+  "text9": ""
+  },
+  "10": {
+  "description10": "pechuga campestre",
+  "ingredientes10": "",
+  "text10": ""
+  },
+  "11": {
+  "description11": "Granada, platano, kiwi con salsa de fresa",
+  "ingredientes11": "",
+  "text11": ""
+  },
+  "12": {
+  "description12": "pulpo salvaje salteados con piña",
+  "ingredientes12": "",
+  "text12": ""
+  },
+  "13": {
+  "description13": "tomates, lechuga, aceitunas...",
+  "ingredientes13": "",
+  "text13": ""
+  },
+  "14": {
+  "description14": "guacamole, mesclúm de brotes",
+  "ingredientes14": "",
+  "text14": ""
+  },
+  "15": {
+  "description15": "salmón con sésamo, pimienta y arrope",
+  "ingredientes15": "",
+  "text15": ""
+  },
+  "16": {
+  "description16": "Nachos con aguacate, nata y huevo",
+  "ingredientes16": "",
+  "text16": ""
+  },
+  "17": {
+  "description17": "Jamón con tomate",
+  "ingredientes17": "",
+  "text17": ""
+  },
+ 
+  "18": {
+    "description18": "pato caramelizado a la naranja",
+    "ingredientes18": "",
+    "text18": ""
+  }
+}

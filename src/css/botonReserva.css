@@ -1,0 +1,78 @@
+/*boton de reserva animado*/
+.btn-reserva {
+    min-width: 50px;
+    min-height: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #fbd6b8;
+  background: linear-gradient(90deg, #d0a480 0%, #d0a480 100%);
+    border: none;
+    
+    box-shadow: 12px 12px 24px #d0a480;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    }
+  
+.btn-reserva::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(200px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #dac1ac;
+    box-shadow: 0 0 40px #8d735d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .btn-reserva:hover, .btn-reserva:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  .btn-reserva:hover::before, .btn-reserva:focus::before {
+    opacity: 1;
+  }
+  
+  .btn-reserva::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #986236;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .btn-reserva:hover::after, .btn-reserva:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 90px;
+      opacity: 0;
+    }
+  }
+/* fin del boton de reserva animado*/

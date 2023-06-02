@@ -1,0 +1,20 @@
+{
+    "restaurante" : "Acerca de nosotros",
+    "menus": "menus",
+    "especialidades": "especialidades",
+    "menu-grupo": "menu de  grupo",
+    "login": "iniciar sesión",
+    "reservas": "reservas",
+    "espanol": "español",
+    "ingles": "inglés",
+    "frances": "francés",
+    "mis-reservas": "mis reservas",
+    "nuevo-usuario": "nuevo usuario",
+    "log-out" : "cerrar sesión",
+    "orientales": "recetas orientales",
+    "cargar": "cargar",
+    "nueva-receta": "nueva receta",
+    "usuario": "usuario",
+    "password": "contraseña",
+    "enviar": "enviar"
+}

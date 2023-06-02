@@ -1,0 +1,20 @@
+{
+    "restaurante" : "About Us",
+    "menus": "Menus",
+    "especialidades": "Specialties",
+    "menu-grupo": "Group Menu",
+    "login": "Log In",
+    "reservas": "Reservations",
+    "espanol": "Spanish",
+    "ingles": "English",
+    "frances": "French",
+    "mis-reservas": "My Reservations",
+    "nuevo-usuario": "New User",
+    "log-out" : "Log Out",
+    "orientales": "Oriental Recipes",
+    "cargar": "Load",
+    "nueva-receta": "New Recipe",
+    "usuario": "User",
+    "password": "Password",
+    "enviar": "Send"
+}
