@@ -1,16 +1,15 @@
 {
   "name": "restaurant",
-  "homepage": "https://jsusito.github.io/restaurant-web-multilanguage",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "vite build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3000"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

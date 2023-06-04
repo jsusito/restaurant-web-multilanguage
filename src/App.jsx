@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/fragments/Footer';
 import Nav from './components/fragments/Nav';
@@ -85,12 +85,13 @@ const userData = {
   
   return (
       
-  <HashRouter>
+  <BrowserRouter>
     <UserContext.Provider value = {userData}>
       <Suspense fallback={<div>Loading...</div>}>      
         <Nav></Nav>
           <Routes>
             <Route path="/" element={<PagRestaurante></PagRestaurante>}> </Route>
+            
             <Route path="/reserva" element={<Reserva></Reserva>}> </Route>
             <Route path="/carta" element={<Carta></Carta>}> </Route>
             <Route path="/especialidades" element={<Especialidades></Especialidades>}></Route>
@@ -106,7 +107,7 @@ const userData = {
         <Cookies ></Cookies>
       </Suspense>
      </UserContext.Provider>
-  </HashRouter>
+  </BrowserRouter>
      
   );
 }
