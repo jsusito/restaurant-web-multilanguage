@@ -139,7 +139,7 @@ function Nav(){
                 </div>
             
             <div>
-                    <Link className="nav-link active btn-menu" aria-current="page" to="/" style={{fontSize:20}}>{t('restaurante')}</Link>
+                    <Link className="nav-link active btn-menu" aria-current="page" to="restaurante" style={{fontSize:20}}>{t('restaurante')}</Link>
                     </div>
               </div>
             
