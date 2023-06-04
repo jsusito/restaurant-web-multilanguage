@@ -1,11 +1,11 @@
 {
   "name": "restaurant",
-  "homepage": "http://www.casandrarestaurantes.com",
+  "homepage": "https://jsusito.github.io/restaurant-web-multilanguage",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm vite build",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
