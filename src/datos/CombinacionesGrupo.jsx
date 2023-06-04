@@ -4,26 +4,36 @@ import { RecetasComida } from "./RecetasComida"
 import { RecetasEnsaladas } from "./RecetasEnsaladas"
 import { RecetaBebidas } from "./RecetaBebidas"
 
-export function CombinacionesGrupo(){
+export function CombinacionesGrupo(translation){
     
     //Formamos los menus diferentes 
     
-    const menu1Ensaladas = [RecetasEnsaladas()[0], RecetasEnsaladas()[2],]
-    const menu1Entrantes=[RecetasMontaditos()[0], RecetasMontaditos()[2],]
-    const menu1Principales = [RecetasComida()[0], RecetasComida()[2],]
-    const menu1Especialidad = [RecetaEspecial()[0], RecetaEspecial()[2],]
+    const recetasComidas = RecetasComida(translation);
+    const recetasEnsaladas = RecetasEnsaladas(translation);
+    const recetasMontaditos = RecetasMontaditos(translation);
+    const recetasEspecial = RecetaEspecial(translation);
+    const recetasBebidas = RecetaBebidas(translation);
+
     
-    const menu2Ensaladas = [RecetasEnsaladas()[1], RecetasEnsaladas()[3],]
-    const menu2Entrantes=[RecetasMontaditos()[1], RecetasMontaditos()[3],]
-    const menu2Principales = [RecetasComida()[1], RecetasComida()[3],]
-    const menu2Especialidad = [RecetaEspecial()[3], RecetaEspecial()[4],]
+
+
+
+    const menu1Ensaladas = [recetasEnsaladas[0], recetasEnsaladas[2],]
+    const menu1Entrantes=[recetasMontaditos[0], recetasMontaditos[2],]
+    const menu1Principales = [recetasComidas[0], recetasComidas[2]]
+    const menu1Especialidad = [recetasEspecial[0], recetasEspecial[2],]
     
-    const menu3Ensaladas = [RecetasEnsaladas()[2], RecetasEnsaladas()[0],]
-    const menu3Entrantes=[RecetasMontaditos()[2], RecetasMontaditos()[3],]
-    const menu3Principales = [RecetasComida()[0], RecetasComida()[3],]
-    const menu3Especialidad = [RecetaEspecial()[1], RecetaEspecial()[5],]
+    const menu2Ensaladas = [recetasEnsaladas[1], recetasEnsaladas[3],]
+    const menu2Entrantes=[recetasMontaditos[1], recetasMontaditos[3],]
+    const menu2Principales = [recetasComidas[1], recetasComidas[3],]
+    const menu2Especialidad = [recetasEspecial[3], recetasEspecial[4],]
     
-    const bebidas =[RecetaBebidas()[0], RecetaBebidas()[1],RecetaBebidas()[2],RecetaBebidas()[3]]
+    const menu3Ensaladas = [recetasEnsaladas[2], recetasEnsaladas[0],]
+    const menu3Entrantes=[recetasMontaditos[2], recetasMontaditos[3],]
+    const menu3Principales = [recetasComidas[0], recetasComidas[3],]
+    const menu3Especialidad = [recetasEspecial[1], recetasEspecial[5],]
+    
+    const bebidas =[recetasBebidas[0], recetasBebidas[1],recetasBebidas[2],recetasBebidas[3]]
     
     const menus =[
         {

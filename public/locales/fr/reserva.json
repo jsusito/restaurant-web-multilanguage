@@ -1,0 +1,41 @@
+{    
+    "header1": "faites vos réservations",
+    "header2": "par téléphone",
+    "header3": "en ligne",
+    "header4": "réservez avec nous",
+
+    "title": "faites-le maintenant",
+
+    "text1": "prénom",
+    "text2": "nom de famille",
+    "text3": "téléphone",
+    "text4": "date",
+    "text5": "email",
+    "text6": "personnes",
+
+    "texterror1": "doit comporter au moins 4 caractères. Seules les lettres sont autorisées",
+    "texterror2": "doit comporter au moins 3 lettres",
+    "texterror3": "doit être un numéro de 9 chiffres ou plus",
+    "texterror4": "veuillez entrer une adresse email valide",
+
+    "leyenda1": "réservé",
+    "leyenda2": "libre",
+    "mesa": "table",
+    "enviar": "envoyer",
+
+    "button1": "réserver",
+    "button2": "contacter",
+
+    "telefono": "téléphone",
+    "direccion": "adresse",
+
+    
+    "contacta-con": "contactez",
+    "casandra": "Casandra Restaurants",
+    "mensaje": "message",
+    "contacto": "nous vous contacterons rapidement",
+    "envio-ok": "traité avec succès",
+    "escribe-frase": "entrez au moins une phrase"
+    
+    
+}

@@ -1,33 +1,33 @@
 {
   "1": {
-  "description": "crêpes à la viande",
-  "ingredientes": "Délicieuses crêpes à la viande avec du riz et des haricots",
-  "text": "Délicieuses crêpes à la viande"
+  "description1": "crêpes à la viande",
+  "ingredientes1": "Délicieuses crêpes à la viande avec du riz et des haricots",
+  "text1": "Délicieuses crêpes à la viande"
   },
   "2": {
-  "description": "arepa spéciale aux légumes",
-  "ingredientes": "Avocat, tomate, oignon, sauce spéciale",
-  "text": "Essayez nos arepas, une explosion de saveurs"
+  "description2": "arepa spéciale aux légumes",
+  "ingredientes2": "Avocat, tomate, oignon, sauce spéciale",
+  "text2": "Essayez nos arepas, une explosion de saveurs"
   },
   "3": {
-  "description": "dessert tropical",
-  "ingredientes": "Fraises, menthe, riz soufflé et mûres fraîches",
-  "text": "Un merveilleux dessert à savourer"
+  "description3": "dessert tropical",
+  "ingredientes3": "Fraises, menthe, riz soufflé et mûres fraîches",
+  "text3": "Un merveilleux dessert à savourer"
   },
   "4": {
-  "description": "bacon farci",
-  "ingredientes": "Pâte feuilletée, bacon, dattes et sauce barbecue",
-  "text": "Une expérience inoubliable"
+  "description4": "bacon farci",
+  "ingredientes4": "Pâte feuilletée, bacon, dattes et sauce barbecue",
+  "text4": "Une expérience inoubliable"
   },
   "5": {
-  "description": "sandwich marin",
-  "ingredientes": "Pain, tomate, roquette, soja, ananas",
-  "text": "Essayez-le, vous voudrez revenir"
+  "description5": "sandwich marin",
+  "ingredientes5": "Pain, tomate, roquette, soja, ananas",
+  "text5": "Essayez-le, vous voudrez revenir"
   },
   "6": {
-  "description": "viande Viera en sauce",
-  "ingredientes": "Viande avec sauce, ail, tomate, truffe et prune",
-  "text": "Un de nos meilleurs plats disponibles"
+  "description6": "viande Viera en sauce",
+  "ingredientes6": "Viande avec sauce, ail, tomate, truffe et prune",
+  "text6": "Un de nos meilleurs plats disponibles"
   },
   "7": {
   "description7": "nouilles à la viande et au poivron",

@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { ConfirmSendForm } from "../formularios/ConfirmSendForm";
 import { FailSendForm } from "./FailSendForm";
 import { LabelInput } from "./LabelInput";
+import { useTranslation } from "react-i18next";
 
 export function FormContact(){
     
+    const [t] = useTranslation('reserva');
     const [nombre, setNombre] = useState("");        
     const [apellido, setApellido] = useState("");        
     const [email, setEmail] = useState("");
@@ -18,9 +20,9 @@ export function FormContact(){
     const labelFor =[
         {
            id:0,
-           text: "nombre",
+           text: t('text1'),
            type: "text",
-           placeholder:"Mayor de cuatro caracteres. Solo letras",
+           placeholder:t('texterror1'),
            value:nombre,
            setValue:setNombre,
            pattern : /^[a-zA-Z ]{4,}$/
@@ -28,9 +30,9 @@ export function FormContact(){
         },
         {
             id:1,
-            text: "apellido",
+            text: t('text2'),
             type: "text",
-            placeholder:"Mayor de cuatro caracteres. Solo letras",     
+            placeholder:t('texterror1'),     
             value:apellido,
             pattern : /^[a-zA-Z ]{4,}$/,
             setValue:setApellido
@@ -39,7 +41,7 @@ export function FormContact(){
             id:2,
             text: "email",
             type: "email",
-            placeholder:"Email válido",
+            placeholder: t('texterror4'),
             value:email,
             setValue:setEmail,
             pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/   
@@ -90,10 +92,10 @@ export function FormContact(){
                     <form className="mb-3" ref={form} onSubmit={sendEmail}>
                         <div className="row pt-4 justify-content-center" >
                             <div className="col-12">
-                                <h6 className="form-reserva text-center">Contacta con</h6>
+                                <h6 className="form-reserva text-center">{t('contacta-con')}</h6>
                             </div>
                             <div className="col-12 text-center mb-4">
-                                <h2>Casandra Restaurantes</h2>
+                                <h2>{t('casandra')}</h2>
                             </div> 
                         
                         {
@@ -116,7 +118,7 @@ export function FormContact(){
                                 </div>
                             ))}
                             <div className="col-md-9 mb-5  justify-content-center">
-                                <label className="form-label" htmlFor="info">Mensaje</label>
+                                <label className="form-label" htmlFor="info">{t('mensaje')}</label>
                                 <textarea 
                                     className="form-control" 
                                     id="info" 
@@ -125,15 +127,15 @@ export function FormContact(){
                                     onChange={event =>(setValueTextArea(event.target.value))}>
                                 </textarea>
                             <div className="text-primary">
-                                Escribe mínimo una frase
+                                {t('escribe-frase')}
                             </div>
                             </div>
                             
                             <div className="col-md-12 mb-5 d-flex justify-content-center align-items-center">
-                                <button  type="submit" className="btn btn-warning w-50" disabled={buttonDisable}>Enviar</button>
+                                <button  type="submit" className="btn btn-warning w-50" disabled={buttonDisable}>{t('enviar')}</button>
                             </div>
                             
-                        {formSend && <ConfirmSendForm textInfo={"Nos pondremos en contacto con usted en breve"} textConfirm={"Se ha enviado su peticion"}/>}
+                        {formSend && <ConfirmSendForm textInfo={t('contacto')} textConfirm={t('envio-ok')}/>}
                         {fail && <FailSendForm/>}
                         </div>
                     </form>

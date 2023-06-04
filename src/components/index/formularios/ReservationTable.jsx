@@ -2,11 +2,13 @@
 import { GroupRadio } from "./GroupRadio";
 import { Constants } from "../../../utils/Constants";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function ReservationTable(props){
     
     const constantes = new Constants();
     const radios = constantes.TIME_LUNCH;
+    const [t] = useTranslation('reserva');
 
     const tableNumbers = constantes.TOTAL_TABLES;   
     
@@ -27,7 +29,7 @@ export function ReservationTable(props){
                             
                             <div className="col-4" key={index}>
                                 <GroupRadio
-                                    tittle = {"mesa " + (state)}
+                                    tittle = {`${t('mesa')} ${state}`}
                                     numberMesa = {state}
                                     radios = {radios}
                                     setValueState={props.setValueState}

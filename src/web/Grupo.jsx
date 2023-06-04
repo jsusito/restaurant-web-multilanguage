@@ -1,20 +1,28 @@
 
+import { useContext, useEffect, useState } from "react";
 import { Encabezados } from "../components/index/MenuGrupo/Encabezados";
-import  {CombinacionesGrupo}  from "../datos/CombinacionesGrupo";
-import { TodosMenus } from "../components/index/MenuGrupo/TodosMenus";
-import { useEffect, useState } from "react";
 import { Menu } from "../components/index/MenuGrupo/Menu";
+import { TodosMenus } from "../components/index/MenuGrupo/TodosMenus";
+import { CombinacionesGrupo } from "../datos/CombinacionesGrupo";
 import { Constants } from "../utils/Constants";
+import { UserContext } from "../components/index/authentication/UserSesion";
 
-const constants = new Constants();
 
-const combinaciones = CombinacionesGrupo();
-
-const menu1 = combinaciones[1];
-const menu2 = combinaciones[2];
-const menu3 = combinaciones[3];
 
 export function Grupo(){
+    
+    const constants = new Constants();
+
+    const context = useContext(UserContext);
+
+    const t = context.translationRecetas;
+    const combinaciones = CombinacionesGrupo(t);
+
+    const menu1 = combinaciones[1];
+    const menu2 = combinaciones[2];
+    const menu3 = combinaciones[3];    
+    
+    
     const menu1Entrantes= menu1.entrantes
     const menu2Entrantes= menu2.entrantes
     const menu3Entrantes= menu3.entrantes

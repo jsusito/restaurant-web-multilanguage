@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 const onClickHandleFacebook = () =>{
     window.location.href = "https://www.facebook.com"
 }
@@ -7,13 +8,16 @@ const onClickHandleInstagram = () =>{
 }
 
 function Footer(){
+    
+    const [t] = useTranslation('navFragment');
+
     return(
         
         <div className="row">
             <div className="col-12 footer-text d-flex justify-content-around align-content-center" >
                 
                 <div className="d-flex align-content-center p-2">
-                    <h3 className="text-footer">Visita nuestras Redes sociales</h3>
+                    <h3 className="text-footer">{t('visitanos')}</h3>
                 </div>
                 
                 <div className="d-flex align-content-center p-2">

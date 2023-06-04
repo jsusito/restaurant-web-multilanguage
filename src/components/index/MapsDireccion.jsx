@@ -4,9 +4,12 @@ import iconComida from "./../../images/icon-comida.png";
 import iconEmail from "./../../images/email.png";
 import iconWhatsapp from "./../../images/whatsapp.png";
 import iconDireccion from "./../../images/direccion.png";
+import { useTransition } from "react";
+import { useTranslation } from "react-i18next";
 
 function MapsDireccion(){
     
+   const [t] = useTranslation('reserva') 
    return(
         <div className="container-fluid">
             <div className="row mb-4 mt-2">
@@ -19,9 +22,9 @@ function MapsDireccion(){
                     <div className="container">
                         <div className="row">
                             <IconEnlace litte={true} icon={iconWhatsapp} title="whatsapp" description="(+34) 1234.567.891."/>
-                            <IconEnlace litte={true} icon={iconComida} title="telefono" description="(+34) 1234.567.891."/>
+                            <IconEnlace litte={true} icon={iconComida} title={t('telefono')} description="(+34) 1234.567.891."/>
                             <IconEnlace litte={true} icon={iconEmail} title="email" description="casandraRest@gmail.com"/>
-                            <IconEnlace litte={true}icon={iconDireccion} title="direccion" description="ESCONDITE 44. EL GOLFO"/>
+                            <IconEnlace litte={true}icon={iconDireccion} title={t('direccion')}  description="ESCONDITE 44. EL GOLFO"/>
                         </div>
                     </div>
                 </div>

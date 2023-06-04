@@ -16,6 +16,7 @@ import Reserva from './web/Reserva';
 import { Reservations } from './components/index/Reservations';
 import { FormNewUser } from './components/index/formularios/FormNewUser';
 import { Constants } from './utils/Constants';
+import { useTranslation } from 'react-i18next';
 
 
 function App() {
@@ -27,6 +28,7 @@ const [authenticate,setAuthenticate] = useState();
 const [nameSesion, setNameSesion] = useState("");
 const [showCountDown, setShowCountDown] = useState("");
 const userAuthorities = useRef([]);
+const [translationRecetas] = useTranslation('recetas');
 
 //variables de contexto
 const userData = {
@@ -42,6 +44,8 @@ const userData = {
   authorities: userAuthorities,
 
   timeSecurityExit: showCountDown,
+
+  translationRecetas: translationRecetas
     
 }
 

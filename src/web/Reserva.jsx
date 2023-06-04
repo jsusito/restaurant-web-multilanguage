@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import  imgRestaurant1 from "./../images/restaurante01.jpg";
 import  iconTel from "./../images/icon-telefono.png";
 import  iconReserva from "./../images/reserva.png";
@@ -12,6 +13,7 @@ function Reserva(){
     
     const [showPagContact, setShowPagContact] = useState(false);
     const [showPagReserva, setShowPagReserva] = useState(false);
+    const [t] = useTranslation('reserva');
 
     
     //Muestra o el formulario de contacto o el formulario de reserva
@@ -34,8 +36,8 @@ function Reserva(){
              
             <div className="row mt-5 d-flex ">
                 <div className="col-md-5 d-flex align-items-center flex-column justify-content-center">
-                    <IconEnlace icon={iconTel} title="realice sus reservas" description="por telefono" url='tel:+34 1234567891'/>
-                    <IconEnlace icon={iconComida} title="realice sus reservas" description="on line"/>
+                    <IconEnlace icon={iconTel} title={t('header1')} description={t('header2')} url='tel:+34 1234567891'/>
+                    <IconEnlace icon={iconComida} title={t('header1')} description="on line"/>
                 </div>
                 <div className="col-md-5 d-flex align-items-center flex-column justify-content-center">
                     <IconEnlace icon={iconTel} description="(+34) 1234.567.891."/>    

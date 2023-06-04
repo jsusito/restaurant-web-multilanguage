@@ -1,12 +1,18 @@
-export class TipoReceta{
-    
-    VEGETARIANO = "VEGERATIANO"
-    SIN_GLUTEN = "SIN GLUTEN";
-    CARNE = "CARNE"
-    PESCADO = "PESCADO"
-    MARISCO ="MARISCO"
+import { useTranslation } from "react-i18next";
 
-    getAllType(){
-        return [this.VEGETARIANO, this.SIN_GLUTEN, this.CARNE, this.PESCADO, this.MARISCO];
-    }
+export function TipoReceta(){
+    
+   const [t] = useTranslation('carta');
+  
+    const tipoReceta = 
+        {
+            VEGETARIANO: t('vegetariano'),
+            SIN_GLUTEN: t('sin-gluten'),
+            CARNE: t('carne'),
+            PESCADO: t('pescado'),
+            MARISCO: t('marisco'),
+        }
+    
+    return tipoReceta;
+
 }

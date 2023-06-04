@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 function IntroUsuario(){
     
     const [t]  = useTranslation('restaurantPag');
+    const [tRecetas] = useTranslation('recetas');
 
     const datos = [
         {
@@ -73,7 +74,7 @@ function IntroUsuario(){
                                 <button type="button" data-bs-target="#carouselComida" data-bs-slide-to="0" className="active"></button>
                                 
                                 {
-                                    RecetaEspecial().map((receta)=>(<button key={receta.id} type="button" data-bs-target="#carouselComida" data-bs-slide-to={receta.id} />))    
+                                    RecetaEspecial(tRecetas).map((receta)=>(<button key={receta.id} type="button" data-bs-target="#carouselComida" data-bs-slide-to={receta.id} />))    
                                         
                                 }
                             </div>
@@ -83,7 +84,7 @@ function IntroUsuario(){
                                     <img src={imagenActiva} className="d-block  img-carrusel"  alt="..."/>
                                 </div>
                                 {
-                                    RecetaEspecial().map((receta)=>
+                                    RecetaEspecial(tRecetas).map((receta)=>
                                         <div key={receta.id} className="carousel-item data-bs-interval=5000">
                                             <img src={receta.imagen} className="d-block img-carrusel" alt="..."/>
                                         </div>   

@@ -1,5 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 function IconEnlace(props){
     const url = props.url;
+    const [t] = useTranslation('reserva')
+    
     return(
             <div className="row-fluid">
                 <div className="row ">   
@@ -19,8 +23,8 @@ function IconEnlace(props){
                                 {props.buttonClass 
                                     && 
                                         <>
-                                        <button type="button" className={props.buttonClass} onClick={()=>(props.onClickReserva())}>reservar</button>
-                                        <button type="button" className={props.buttonClass} onClick={()=>(props.onClickContact())}>Contactar</button>
+                                        <button type="button" className={props.buttonClass} onClick={()=>(props.onClickReserva())}>{t('button1')}</button>
+                                        <button type="button" className={props.buttonClass} onClick={()=>(props.onClickContact())}>{t('button2')}</button>
                                         </>
                                 }
                             </div>

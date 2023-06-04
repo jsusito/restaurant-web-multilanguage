@@ -5,14 +5,14 @@ import imagen4 from "./../images/carta/4.jpg"
 import { TipoReceta } from "./TipoReceta"
 
 
-export function RecetasMontaditos() { 
+export function RecetasMontaditos(t) { 
     
     const tipo = new TipoReceta();
 
     return [
     {
         id:"15",
-        description: "salmón con sésamo, pimentada, arrope",
+        description: t('15.description15'),
         precio: "5.02",
         imagen: imagen1,
         tipo: [tipo.PESCADO, tipo.SIN_GLUTEN, ]
@@ -20,21 +20,21 @@ export function RecetasMontaditos() {
     {
         
         id:"16",
-        description: "Nachos con aguacate, nata y huevo",
+        description: t('16.description16'),
         precio: "9",
         imagen: imagen2,
         tipo: [tipo.VEGETARIANO, tipo.SIN_GLUTEN, ]
     },
     {
         id:"17",
-        description: "Jamón con tomate",
+        description: t('17.description17'),
         precio: "4",
         imagen: imagen3,
         tipo:[tipo.CARNE,]
     },
     {
         id:"18",
-        description: "pato caramelizado a la naranja",
+        description: t('18.description18'),
         precio: "7",
         imagen: imagen4,
         tipo: [tipo.CARNE, tipo.SIN_GLUTEN, ]

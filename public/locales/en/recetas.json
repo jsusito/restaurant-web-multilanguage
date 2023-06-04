@@ -1,33 +1,33 @@
 {
   "1": {
-    "description": "meat pancakes",
-    "ingredientes": "Delicious meat pancakes with rice and beans",
-    "text": "Delicious meat pancakes"
+    "description1": "meat pancakes",
+    "ingredientes1": "Delicious meat pancakes with rice and beans",
+    "text1": "Delicious meat pancakes"
   },
   "2": {
-    "description": "special vegetable arepa",
-    "ingredientes": "Avocado, tomato, onion, special sauce",
-    "text": "Try our arepas, an explosion of flavors"
+    "description2": "special vegetable arepa",
+    "ingredientes2": "Avocado, tomato, onion, special sauce",
+    "text2": "Try our arepas, an explosion of flavors"
   },
   "3": {
-    "description": "tropical dessert",
-    "ingredientes": "Strawberries, mint, puffed rice, and fresh blackberries",
-    "text": "A wonderful dessert to enjoy"
+    "description3": "tropical dessert",
+    "ingredientes3": "Strawberries, mint, puffed rice, and fresh blackberries",
+    "text3": "A wonderful dessert to enjoy"
   },
   "4": {
-    "description": "stuffed bacon",
-    "ingredientes": "Puff pastry, bacon, dates, and barbecue sauce",
-    "text": "An unforgettable experience"
+    "description4": "stuffed bacon",
+    "ingredientes4": "Puff pastry, bacon, dates, and barbecue sauce",
+    "text4": "An unforgettable experience"
   },
   "5": {
-    "description": "maritime sandwich",
-    "ingredientes": "Bread, tomato, arugula, soy, pineapple",
-    "text": "Try it, you'll want to come back"
+    "description5": "maritime sandwich",
+    "ingredientes5": "Bread, tomato, arugula, soy, pineapple",
+    "text5": "Try it, you'll want to come back"
   },
   "6": {
-    "description": "Viera meat in sauce",
-    "ingredientes": "Meat with sauce, garlic, tomato, truffle, and plum",
-    "text": "One of our best available dishes"
+    "description6": "Viera meat in sauce",
+    "ingredientes6": "Meat with sauce, garlic, tomato, truffle, and plum",
+    "text6": "One of our best available dishes"
   },
   "7": {
     "description7": "noodles with meat and bell pepper",

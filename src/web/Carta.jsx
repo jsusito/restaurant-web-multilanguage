@@ -1,19 +1,32 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../components/index/authentication/UserSesion";
 import { ComidaLLevar } from "../components/index/carta/ComidaLLevar";
 import SeccionCarta from "../components/index/carta/SeccionCarta";
 import { FormReservas } from "../components/index/formularios/FormReservas";
+import { RecetaEspecial } from "../datos/RecetaEspecial";
 import { RecetasComida } from "../datos/RecetasComida";
 import { RecetasEnsaladas } from "../datos/RecetasEnsaladas";
 import { RecetasMontaditos } from "../datos/RecetasMontaditos";
+import { SelectTipoReceta } from "../datos/SelectTipoReceta";
 import imgComidas from "../images/carta/comidas.jpg";
 import imgEnsaladas from "../images/carta/ensaladas.jpg";
 import imgMontaditos from "../images/carta/montaditos.jpg";
 import { FilterRecipe } from "../utils/FilterRecipe";
-import { SelectTipoReceta } from "../datos/SelectTipoReceta";
-import { RecetaEspecial } from "../datos/RecetaEspecial";
+import { useTranslation } from "react-i18next";
 
 function Carta(){
   
+  const context = useContext(UserContext);
+
+  const t = context.translationRecetas;
+  const [tCarta] = useTranslation('carta');
+  
+  const comidas = RecetasComida(t);
+  const ensaladas = RecetasEnsaladas(t);
+  const montaditos = RecetasMontaditos(t);
+  const especial = RecetaEspecial(t);
+
+ 
   const NO_SELECTION = "0";
   
   const [filter, setFilter] = useState(NO_SELECTION);
@@ -31,59 +44,66 @@ function Carta(){
 
   useEffect(()=>{
     if(filter === NO_SELECTION){
-        setRecetasEnsaldas(RecetasEnsaladas());
-        SetRecetasComida(RecetasComida());
-        SetRecetasMontaditos(RecetasMontaditos());
-        SetRecetaEspecial(RecetaEspecial());
+        setRecetasEnsaldas(ensaladas);
+        SetRecetasComida(comidas);
+        SetRecetasMontaditos(montaditos);
+        SetRecetaEspecial(especial);
     }
     else{
-        let receta = FilterRecipe(RecetasEnsaladas(), filter)
+        
+        let receta = FilterRecipe(ensaladas, filter)
         setRecetasEnsaldas(receta)
         
-        receta = FilterRecipe(RecetasComida(), filter)
+        receta = FilterRecipe(comidas, filter)
         SetRecetasComida(receta)
 
-        receta = FilterRecipe(RecetasMontaditos(), filter)
+        receta = FilterRecipe(montaditos, filter)
         SetRecetasMontaditos(receta)
 
-        receta = FilterRecipe(RecetaEspecial(), filter)
+        receta = FilterRecipe(especial, filter)
         SetRecetaEspecial(receta)
     }
-},[filter]);
+},[filter,t]);
   
   return(
         <div className="container-fluid background-carta-encabezado ">
-        { !showForm &&    <SelectTipoReceta onOptionChange={setFilter} tittle="Filtrar por"></SelectTipoReceta> }
+            { !showForm &&    
+             <SelectTipoReceta 
+                onOptionChange={setFilter} 
+                tittle={tCarta('filterBy')}
+                />}
+            
             {
                 <>
                      {
                         !showForm &&  recetasMontaditos.length > 0 && <SeccionCarta 
-                        header="Nuestros montaditos" 
-                        tittle="montaditos de" recetas={recetasMontaditos}
+                        header= {tCarta('HeadMontaditos')} 
+                        tittle= {tCarta('TitleMontaditos')} 
+                        recetas={recetasMontaditos}
                         valueState={imagen}
                         setValueState={setImagen}                   
                         />
                     }
                     {
                         !showForm && recetasEnsaladas.length > 0 && <SeccionCarta 
-                        header="las ensaladas" 
-                        tittle="Ensaladas de" recetas={recetasEnsaladas}
+                        header={tCarta('HeadEnsaladas')} 
+                        tittle={tCarta('TitleMontaditos')} recetas={recetasEnsaladas}
                         valueState={imagenEnsalada}
                         setValueState={setImagenEnsalada}                   
                         />
                     }
                     {
                         !showForm && recetasComida.length > 0 && <SeccionCarta 
-                        header="mis platos" 
-                        tittle="recetas de" recetas={recetasComida}
+                        header={tCarta('HeadPlatos')} 
+                        tittle={tCarta('TitlePlatos')} recetas={recetasComida}
                         valueState={imagenComida}
                         setValueState={setImagenComida}                   
                         />
                     }
                     {
                         !showForm && recetaEspecial.length > 0 && <SeccionCarta 
-                        header="Especiales" 
-                        tittle="recetas de" recetas={recetaEspecial}
+                        header={tCarta('HeadEspeciales')} 
+                        tittle={tCarta('TitleEspeciales')} recetas={recetaEspecial}
                         valueState={imagenEspecial}
                         setValueState={setImagenEspecial}                   
                         />

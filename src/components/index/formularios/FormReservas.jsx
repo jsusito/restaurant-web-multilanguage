@@ -1,63 +1,64 @@
 import emailJS from "@emailjs/browser";
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Constants } from "../../../utils/Constants";
 import { GetTomorrowDate } from "../GetTomorrowDate";
 import { UserContext } from "../authentication/UserSesion";
 import { ConfirmSendForm } from "./ConfirmSendForm";
 import { FailSendForm } from "./FailSendForm";
 import { LabelInput } from "./LabelInput";
-import { SelectForm } from "./SelectForm";
 import { ReservationTable } from "./ReservationTable";
+import { SelectForm } from "./SelectForm";
+import { useTranslation } from "react-i18next";
 
 const constants = new Constants();
 const optionPersonas= constants.PERSONS_BY_TABLE;
 const apiGetUser = constants.API_USER;
 const apiReservationGuest = constants.API_RESERVATION + "guest";
 
-const labelFor =[
-        {
-           id:0,
-           text: "nombre",
-           type: "text",
-           placeholder:"Mayor de 4 caractéres. Solo Letras",
-           pattern : /^[a-zA-Z ]{5,}$/
-               
-        },
-        {
-            id:1,
-            text: "apellido",
-            type: "text",
-            placeholder:"Tiene que ser mayor de 3 letras",
-            pattern : /^[a-zA-Z ]{3,}$/     
-            
-        },
-        {
-            id:2,
-            text: "telefono",
-            type: "text",
-            placeholder:"numero de 9 cifras o mayor",
-            pattern : /^[?+?.0-9 ]{9,}$/   
-         },
-         {
-            id:3,
-            text:"fecha",
-            type:"date",
-            pattern : /[*]*/
-
-            
-        },
-        {
-            id:4,
-            text:"email",
-            type:"email",
-            placeholder:"Introduzca un email válido",
-            pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
-        },
-        
-        
-];
-
 export function FormReservas(){
+        
+        const [t] = useTranslation('reserva')
+        const labelFor =[
+            {
+                id:0,
+                text: t('text1'),
+                type: "text",
+                placeholder: t('texterror1'),
+                pattern : /^[a-zA-Z ]{5,}$/
+                
+            },
+            {
+                id:1,
+                text: t('text2'),
+                type: "text",
+                placeholder: t('texterror2'),
+                pattern : /^[a-zA-Z ]{3,}$/     
+                
+            },
+            {
+                id:2,
+                text: t('text3'),
+                type: "text",
+                placeholder: t('texterror3'),
+                pattern : /^[?+?.0-9 ]{9,}$/   
+            },
+            {
+                id:3,
+                text:t('text4'),
+                type:"date",
+                pattern : /[*]*/
+
+                
+            },
+            {
+                id:4,
+                text:t('text5'),
+                type:"email",
+                placeholder: t('texterror4'),
+                pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+            },
+        ];
+        
         const [buttonDisable, setButtonDisable] = useState(true);
         const [cursorBusy, setCursorBusy] = useState(false);
         
@@ -258,10 +259,10 @@ export function FormReservas(){
                     <form className="g-3 needs-validation"  ref={form} onSubmit={sendReservation}>
                         <div className="row  justify-content-center form-reserva">
                             <div className="col-12">
-                                <h6 className="form-reserva text-center mt-2">Haz ahora</h6>
+                                <h6 className="form-reserva text-center mt-2">{t('title')}</h6>
                             </div>
                             <div className="col-12 text-center mb-4">
-                                <h2>tu reserva con nosotros</h2>
+                                <h2>{t('header4')}</h2>
                             </div> 
                         
                         {
@@ -287,7 +288,7 @@ export function FormReservas(){
                         {/* Renderizamos todos los Select */}
 
                             <div className="col-md-4 mx-5 mb-5">
-                                <SelectForm tittle="Personas" setValueState={setPersonas} name={"personas"}
+                                <SelectForm tittle={t('text6')}  setValueState={setPersonas} name={"personas"}
                                     options={optionPersonas}></SelectForm>
                             </div>
                             <hr className="text-primary "/>
@@ -296,11 +297,11 @@ export function FormReservas(){
                             
                                 <div className="d-flex align-items-center  me-5">
                                     <div className="legend-sq bg-warning me-2"></div>
-                                    Reservado
+                                    {t('leyenda1')}
                                 </div>
                                 <div className="d-flex align-items-center">
                                     <div className="legend-sq bg-primary me-2"></div>
-                                    Libre
+                                    {t('leyenda2')}
                                 </div>
                             </div>
 
@@ -312,7 +313,7 @@ export function FormReservas(){
                             
                             <div className="col-12  mx-2 mb-5 d-flex justify-content-center align-items-center">
                                 {!reservaCompleta &&
-                                    <button  type="submit" className="btn btn-warning w-25 my-3 mt-5" disabled={buttonDisable}>Ingresar</button>
+                                    <button  type="submit" className="btn btn-warning w-25 my-3 mt-5" disabled={buttonDisable}>{t('enviar')}</button>
                                 }
                             </div> 
                                    
