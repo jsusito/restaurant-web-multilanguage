@@ -8,4 +8,8 @@ i18
     .use(initReactI18next)
     .use(I18nextBrowserLanguageDetector)
     .use(I18NextHttpBackend)
-    .init({fallbackLng: "es"})
+    .init(
+        {
+            backend: {
+                loadPath: "https://jsusito.github.io/restaurant-web-multilanguage/locales/{{lng}}/{{ns}}.json"
+            }})
