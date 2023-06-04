@@ -85,7 +85,7 @@ const userData = {
   
   return (
       
-  <BrowserRouter>
+  <HashRouter>
     <UserContext.Provider value = {userData}>
       <Suspense fallback={<div>Loading...</div>}>      
         <Nav></Nav>
@@ -107,7 +107,7 @@ const userData = {
         <Cookies ></Cookies>
       </Suspense>
      </UserContext.Provider>
-  </BrowserRouter>
+  </HashRouter>
      
   );
 }
