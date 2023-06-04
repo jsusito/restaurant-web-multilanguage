@@ -4,6 +4,8 @@ import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import I18NextHttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
+const getCurrentHost = import.meta.env.MODE === "development" ? "http://localhost:3000" : "https://jsusito.github.io/restaurant-web-multilanguage";
+
 i18
     .use(initReactI18next)
     .use(I18nextBrowserLanguageDetector)
@@ -11,5 +13,5 @@ i18
     .init(
         {
             backend: {
-                loadPath: "https://jsusito.github.io/restaurant-web-multilanguage/locales/{{lng}}/{{ns}}.json"
+                loadPath: `${getCurrentHost}/locales/{{lng}}/{{ns}}.json` 
             }})
