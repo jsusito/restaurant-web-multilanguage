@@ -90,7 +90,8 @@ const userData = {
       <Suspense fallback={<div>Loading...</div>}>      
         <Nav></Nav>
           <Routes>
-            <Route path="restaurante" element={<PagRestaurante></PagRestaurante>}> </Route>
+            <Route path="/" element = {<PagRestaurante></PagRestaurante>}> </Route>
+            
             
             <Route path="reserva" element={<Reserva></Reserva>}> </Route>
             <Route path="carta" element={<Carta></Carta>}> </Route>
