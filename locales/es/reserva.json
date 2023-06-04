@@ -1,0 +1,42 @@
+
+{    
+    "header1" : "realice sus reservas",
+    "header2" : "por telefono",
+    "header3" : "online",
+    "header4" : "tu reservar con nosotros",
+
+    "title" : "haz ahora",
+
+    "text1" : "nombre",
+    "text2" : "apellido",
+    "text3" : "telefono",
+    "text4" : "fecha",
+    "text5" : "email",
+    "text6" : "personas",
+
+    "texterror1": "mayor de 4 carácteres. Solo letras",
+    "texterror2": "tiene que ser mayour de 3 letras",
+    "texterror3": "numero de 9 cifras o mayor",
+    "texterror4": "introduzca un email válido",
+
+    "leyenda1": "reservado",
+    "leyenda2": "libre",
+    "mesa": "mesa",
+    "enviar": "enviar",
+
+
+    "button1" : "reservar",
+    "button2" : "contactar",
+
+    "telefono" : "telefono",
+    "direccion" : "direccion",
+
+    "contacta-con": "contacta con",
+    "casandra": "casandra restaurantes",
+    "mensaje": "mensaje",
+    "contacto": "nos pondremos en contacto con usted en breve",
+    "envio-ok": "se ha procesado correctamente",
+    "escribe-frase": "escribe mínimo una frase"
+
+
+}

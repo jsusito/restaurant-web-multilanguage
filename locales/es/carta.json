@@ -1,0 +1,29 @@
+{
+    "filterBy": "fitrar por",
+    "HeadMontaditos": "nuestros montaditos",
+    "TitleMontaditos": "montaditos",
+    "HeadEnsaladas" : "las ensaladas",
+    "TitleEnsaladas": "ensaladas",
+    "HeadPlatos": "mis platos",
+    "TitlePlatos": "platos de la casa",
+    "HeadEspeciales": "especiales",
+    "TitleEspeciales": "Platos especiales ...",
+    "HeadComidaLLevar": "Comida para llevar",
+
+    "todas": "todas",
+    "escoja-opcion": "escoja una opcion",
+    "vegetariano":"vegetariano",
+    "sin-gluten": "sin gluten",
+    "carne": "carne",
+    "pescado": "pescado",
+    "marisco": "marisco",
+    
+    "nuestras-especialidades": "nuestras especialidades",
+    "disfrutando": "disfrutando compartiendo",
+    "entrantes": "entrantes para compartir",
+    "principales": "platos principales a elegir",
+    "ensaladas": "ensaladas a elegir",
+    "especiales": "especiales a elegir",
+    "bebidas": "bebidas a elegir"
+
+}
