@@ -90,18 +90,18 @@ const userData = {
       <Suspense fallback={<div>Loading...</div>}>      
         <Nav></Nav>
           <Routes>
-            <Route path="/" element={<PagRestaurante></PagRestaurante>}> </Route>
+            <Route path="." element={<PagRestaurante></PagRestaurante>}> </Route>
             
-            <Route path="/reserva" element={<Reserva></Reserva>}> </Route>
-            <Route path="/carta" element={<Carta></Carta>}> </Route>
-            <Route path="/especialidades" element={<Especialidades></Especialidades>}></Route>
-            <Route path="/grupo" element={<Grupo></Grupo>}></Route>
+            <Route path="reserva" element={<Reserva></Reserva>}> </Route>
+            <Route path="carta" element={<Carta></Carta>}> </Route>
+            <Route path="especialidades" element={<Especialidades></Especialidades>}></Route>
+            <Route path="grupo" element={<Grupo></Grupo>}></Route>
             
-            { authenticate && <Route path="/cargarRecetas" element={<CargarRecetas/>}></Route> }
-            { authenticate && <Route path="/reservas" element={<Reservations/>}></Route> }
-            { authenticate && <Route path="/new-user" element={<FormNewUser/>}></Route> }
+            { authenticate && <Route path="cargarRecetas" element={<CargarRecetas/>}></Route> }
+            { authenticate && <Route path="reservas" element={<Reservations/>}></Route> }
+            { authenticate && <Route path="new-user" element={<FormNewUser/>}></Route> }
             
-            <Route path="/new-receta" element={<NewReceta/>}></Route>
+            <Route path="new-receta" element={<NewReceta/>}></Route>
           </Routes>
         <Footer></Footer>
         <Cookies ></Cookies>
