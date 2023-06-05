@@ -1,7 +1,7 @@
 @import url("botonReserva.css");
 
 :root{
-  --brown:  
+  --colorHoverElements-color: #c3c8e5;  
 }
 
 /*css pag restaurante*/
@@ -37,7 +37,7 @@
   font-weight: 600;
 }
 .btn-logger:hover{
-  background-color: #667ae9;
+  background-color: var(--colorHoverElements-color);
 }
 
 .submenu:logger{
@@ -152,7 +152,7 @@ background-color: #90bae0;
 }
 
 .background-carta-encabezado{
-  background-color: #f1d5bd;
+  background-color: #ffffff;
 }
 
 
@@ -208,7 +208,7 @@ p.parraf-carta:hover{
 
 
 .container-especialidades{
-  background-color: #c4b1ab;
+  background-color: #ffffff;
   width: 100vw;
   
 }
