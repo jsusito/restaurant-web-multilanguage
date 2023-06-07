@@ -1,4 +1,5 @@
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import imageMaps from '../../images/maps.png'
 
 const containerStyle = {
     width: '100%',
@@ -14,20 +15,29 @@ const center = {
 
 function Maps() {
   return (
-    <LoadScript
-      googleMapsApiKey="DIza2yBEChharJTzA-0vaW3b4tIb6nfqoPCCXXQ"
-    >
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={19}
-      >
-        <>
-          <Marker position={ center} label="CASANDRA">
-          </Marker>
-        </>
-      </GoogleMap>
-    </LoadScript>
+    
+    //Como está la Apikey caducada devolvemos un enlace con una imagen dentro a google maps
+    <a href="https://goo.gl/maps/AKA2WpxEYytrf8Nw9">
+      <img src={imageMaps} alt="maps"   width="80%" height="80%" />
+    </a>
+
+
+
+
+    
+    //Clave caducada 
+    // <LoadScript googleMapsApiKey="DIza2yBEChharJTzA-0vaW3b4tIb6nfqoPCCXXQ">
+    //   <GoogleMap
+    //     mapContainerStyle={containerStyle}
+    //     center={center}
+    //     zoom={19}
+    //   >
+    //     <>
+    //       <Marker position={ center} label="CASANDRA">
+    //       </Marker>
+    //     </>
+    //   </GoogleMap>
+    // </LoadScript>
   )
 }
 
