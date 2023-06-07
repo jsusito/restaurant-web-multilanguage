@@ -18,7 +18,7 @@ function Maps() {
     
     //Como está la Apikey caducada devolvemos un enlace con una imagen dentro a google maps
     <a href="https://goo.gl/maps/AKA2WpxEYytrf8Nw9">
-      <img src={imageMaps} alt="maps"   width="80%" height="80%" />
+      <img src={imageMaps} alt="maps"   width="100%" height="100%" />
     </a>
 
 
