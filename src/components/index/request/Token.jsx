@@ -45,7 +45,7 @@ export class Token{
         })
         .then(() => this.#getAuthorities())
         .then(() => document.cookie = `authorities=${this.authorities};max-age=${timeExpiredToken};samesite=strict`)
-        .catch(error => {
+        .catch(() => {
             this.loggedIn = false;
         });
     }
